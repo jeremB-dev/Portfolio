@@ -1,0 +1,53 @@
+@use "../utils/mixins";
+@use "../base/variables";
+
+.contact-form {
+  @include container;
+  max-width: 600px;
+
+  form {
+    @include flex(column);
+    gap: $spacing-base;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $spacing-small;
+    color: $color-text;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $color-border;
+    border-radius: $border-radius;
+    transition: all $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+
+  button {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 12px $spacing-large;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all $transition-base;
+    margin: 0 auto;
+    width: 200px;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba($color-primary, 0.3);
+    }
+  }
+}

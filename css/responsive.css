@@ -1,0 +1,230 @@
+/* ==========================================================================
+   GRAND ÉCRAN (1024px et moins)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Global */
+  body {
+    padding-top: 80px;
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+
+  /* Header */
+  .header-content {
+    padding: 0 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Projets */
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .project-card.active {
+    width: 95%;
+    height: 85vh;
+  }
+}
+
+/* ==========================================================================
+     TABLETTE (768px et moins)
+     ========================================================================== */
+@media (max-width: 768px) {
+  /* Global */
+  body {
+    padding-top: 60px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+
+  /* Header */
+  header {
+    padding: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Section À propos */
+  .profile-photo-container {
+    flex: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .profile-photo {
+    width: 220px;
+    height: 220px;
+    max-width: 80vw;
+  }
+
+  #about p {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  #about br {
+    display: none;
+  }
+
+  #about ul {
+    list-style-position: inside;
+    padding: 0;
+  }
+
+  #about li {
+    margin-bottom: 10px;
+  }
+
+  /* Section Technologies */
+  #technologies ul {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  /* Section Projets */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .project-card {
+    margin: 0 10px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .project-card.active {
+    width: 95%;
+    height: 90vh;
+    overflow-y: auto;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .project-info {
+    padding: 15px;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  /* Section Contact */
+  #contact form {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+
+  /* Modal */
+  .modal {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .modal h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================================================
+     MOBILE (480px et moins)
+     ========================================================================== */
+@media (max-width: 480px) {
+  /* Global */
+  body {
+    padding-top: 90px;
+    font-size: 14px;
+    padding-right: 0;
+    padding-left: 0;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+    width: 100%;
+  }
+
+  /* Sections */
+  section {
+    padding: 20px 10px;
+    margin: 10px 5px;
+    width: calc(100% - 10px); /* Prend en compte les marges */
+    box-sizing: border-box;
+  }
+
+  /* Projets */
+  .projects-grid {
+    padding: 0 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-card {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* Header */
+  header {
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  .header-content {
+    padding: 0 5px;
+    width: 100%;
+  }
+
+  .profile-photo {
+    width: 200px; /* Réduit de 180px à 150px */
+    height: 200px;
+    max-width: 55vw;
+  }
+
+  /* Contact */
+  #contact form {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+
+  /* Modal */
+  .modal-overlay {
+    padding: 0 10px;
+  }
+}
