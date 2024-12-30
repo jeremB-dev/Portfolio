@@ -1,23 +1,23 @@
-// Importer d'abord les styles de base qui contiennent les variables et mixins
+// 1. Styles de base (variables et mixins)
 @use "styles/variables";
 @use "styles/mixins";
-@use "styles/breakpoints";
 
-// Ensuite le reset et les animations
+// 2. Base styles
 @use "base/reset";
 @use "base/anim";
 
-// Layout
+// 3. Layout (structure principale)
 @use "layout/header";
 @use "layout/navbar";
 @use "layout/grid";
 @use "layout/footer";
 
-// Puis les composants
+// 4. Components
+@use "components/technos";
 @use "components/buttons";
 @use "components/cards";
 @use "components/forms";
 @use "components/modal";
 
-// Pages spécifiques
+// 5. Pages spécifiques
 @use "page/home";

@@ -1,35 +1,103 @@
-// _grid.scss
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
-  margin-top: 30px;
+  gap: 25px;
+  margin-top: 20px;
   width: 100%;
   position: relative;
-  padding: 20px;
+  padding: 15px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+  }
 }
 
 .career-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 30px 0;
-  padding: 20px 0;
+  align-items: stretch;
+  gap: 25px;
+  margin: 20px 0;
+  padding: 15px 20px; // Ajout du padding horizontal
   width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 15px 0;
+    padding: 10px 20px;
+  }
+}
+
+.career-section {
+  flex: 1;
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.career-text {
+  line-height: 1.6;
+  font-size: medium;
+  text-align: left;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 15px; // Ajout de padding pour éviter que le texte touche les bords
+  }
+}
+
+ul {
+  padding: 0 20px;
+  margin: 20px 0;
+
+  @media (max-width: 768px) {
+    padding: 0 15px; // Ajout de padding pour éviter que la liste touche les bords
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px; // Ajout de padding pour éviter que la liste touche les bords
+  }
 }
 
 .career-divider {
-  width: 4px;
-  height: 455px;
+  width: 3px;
+  height: auto;
+  align-self: stretch;
   background: linear-gradient(
     to bottom,
     transparent,
     $primary-color,
     transparent
   );
-  margin: 0 20px;
+  margin: 0 15px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 3px;
+    margin: 15px 0 50px 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      $primary-color,
+      transparent
+    );
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 }

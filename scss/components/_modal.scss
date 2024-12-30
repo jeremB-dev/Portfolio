@@ -1,6 +1,4 @@
-// _modal.scss
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
 
 .modal-overlay {
   position: fixed;
@@ -27,16 +25,41 @@
   animation: slideIn 0.3s ease;
   border: 2px solid $primary-color;
 
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    max-width: 350px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    width: 95%;
+  }
+
   h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   p {
     margin-bottom: 1rem;
     color: $text-color;
     font-size: 1.1rem;
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
   }
 
   .redirect-text {
@@ -44,5 +67,10 @@
     color: $text-color-light;
     font-style: italic;
     margin-top: 1.5rem;
+
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
   }
 }

@@ -1,22 +1,5 @@
-// _cards.scss
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
-  margin-top: 30px;
-  width: 100%;
-  position: relative;
-  padding: 20px;
-
-  @include mixins.respond-to("tablet") {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 10px;
-  }
-}
+@use "../styles/mixins" as *;
 
 .project-card {
   background-color: $white;
@@ -29,7 +12,7 @@
   cursor: pointer;
   position: relative;
   z-index: 1;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  @include smooth-transition;
 
   &:hover {
     transform: scale(1.02) translateY(-8px);
@@ -38,12 +21,14 @@
 
   .project-image {
     width: 100%;
-    min-height: 300px;
-    max-height: 300px;
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
     object-fit: contain;
-    background-color: $gray-light;
+    background-color: #f5f5f5;
     padding: 10px;
-    transition: all 0.3s ease;
+    flex-shrink: 0;
+    @include smooth-transition;
   }
 
   .project-info {
@@ -51,12 +36,14 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    @include smooth-transition;
 
     h3 {
       font-size: 1.6rem;
       color: $text-color;
       margin: 0;
+      transform: translateY(0);
+      @include smooth-transition;
     }
 
     h4 {
@@ -66,24 +53,127 @@
     }
 
     p {
-      display: none;
       color: $text-color-light;
       font-size: 1.1rem;
       line-height: 1.6;
+      opacity: 0;
+      max-height: 0;
+      transform: translateY(20px);
+      transition: all 0.7s $transition-bezier;
+      display: none;
     }
+
+    a {
+      display: inline-block;
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: 2px solid $primary-color;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      background: linear-gradient(
+        to right,
+        $primary-color 50%,
+        transparent 50%
+      );
+      background-size: 200% 100%;
+      background-position: right bottom;
+
+      &:hover {
+        color: $white;
+        background-position: left bottom;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba($primary-color, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        background: $primary-color;
+        background-size: initial;
+        background-position: initial;
+        color: $white;
+        transition: none;
+
+        &:hover {
+          transform: none;
+          box-shadow: none;
+          background: $primary-color;
+          color: $white;
+        }
+      }
+
+      @media (max-width: 480px) {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: $primary-color;
+    color: $white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+    @include smooth-transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    z-index: 1001;
+
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      transform: scale(1.1) rotate(90deg);
+    }
+  }
+
+  &:not(.active) .close-button {
+    display: none;
   }
 
   .tech-icons {
     display: flex;
     gap: 15px;
+    align-items: center;
+
+    @media (max-width: 480px) {
+      gap: 10px;
+    }
 
     img {
       width: 40px;
       height: 40px;
-      transition: transform 0.3s ease;
+      object-fit: contain;
+      @include smooth-transition;
 
       &:hover {
         transform: scale(1.2);
+      }
+
+      @media (max-width: 768px) {
+        width: 30px;
+        height: 30px;
+      }
+
+      @media (max-width: 480px) {
+        width: 18px;
+        height: 18px;
       }
     }
 
@@ -91,7 +181,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 20px;
+      margin-top: auto;
       width: 100%;
     }
   }
@@ -107,17 +197,46 @@
     z-index: 1000;
     cursor: default;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    @include custom-scrollbar;
+    box-shadow: 0 40px 80px rgba($black, 0.2);
+    @include smooth-transition;
 
     .project-image {
-      height: 300px;
+      height: 300px; // Réduction de la hauteur de l'image
       min-height: 300px;
       max-height: 300px;
+      object-fit: contain;
+      flex-shrink: 0; // Empêcher l'image de se rétrécir
     }
 
     .project-info {
+      flex: 1; // Prendre l'espace restant
+      overflow-y: auto; // Permettre le scroll dans la section info si nécessaire
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
       p {
+        opacity: 1;
+        max-height: none;
+        height: auto;
+        transform: translateY(0);
+        margin: 15px 0;
         display: block;
+        color: $text-color-light;
       }
+
+      h3 {
+        transform: translateY(0);
+      }
+    }
+
+    .close-button {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
     }
   }
 }
@@ -132,43 +251,11 @@
   background-color: rgba($black, 0.8);
   z-index: 999;
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  @include smooth-transition;
+  pointer-events: auto;
 
   &.active {
     display: block;
     opacity: 1;
   }
-}
-
-.close-button {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 35px;
-  height: 35px;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  opacity: 0;
-  transform: scale(0.5) rotate(-180deg);
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-  padding: 0;
-  font-size: 24px;
-  font-family: Arial, sans-serif;
-}
-
-.project-card.active .close-button {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-}
-
-.close-button:hover {
-  background-color: #45a049;
-  transform: scale(1.1) rotate(90deg);
 }

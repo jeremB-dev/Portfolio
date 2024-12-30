@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(overlay);
 
   const projectCards = document.querySelectorAll(".project-card");
+  const header = document.querySelector(".header"); // Sélectionner le header
   let activeCard = null;
 
   projectCards.forEach((card) => {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Ouvrir la carte
       activeCard = card;
       card.classList.add("active");
+      header.classList.add("darkened"); // Assombrir le header
       overlay.style.display = "block"; // Afficher l'overlay avant d'ajouter la classe active
       requestAnimationFrame(() => {
         overlay.classList.add("active");
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeCard() {
     if (activeCard) {
       activeCard.classList.remove("active");
+      header.classList.remove("darkened"); // Réinitialiser le header
       overlay.classList.remove("active");
 
       // Attendre la fin de l'animation avant de cacher l'overlay

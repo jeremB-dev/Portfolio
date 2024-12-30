@@ -1,0 +1,106 @@
+@use "../styles/variables" as *;
+
+#technologies {
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 85px;
+    color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8rem;
+      margin-top: 40px;
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+
+  li {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba($black, 0.1);
+    transition: all 0.3s $transition-bezier;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 8px;
+    }
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 16px rgba($black, 0.1);
+
+      @media (max-width: 480px) {
+        transform: translateY(-4px) scale(1.02);
+      }
+    }
+
+    p {
+      color: $text-color;
+      margin-top: 8px;
+      font-weight: bold;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 360px) {
+    width: 30px;
+    height: 30px;
+  }
+}

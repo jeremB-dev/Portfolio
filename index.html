@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!-- configuration de la page -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Jérémy Brunel</title>
+    <meta http-equiv="Content-Language" content="fr" />
+    <meta name="copyright" content="@ Jérémy Brunel" />
+    <link rel="icon" href="assets/logo-perso/logo.ico" type="image/x-icon" />
+
+    <meta
+      name="description"
+      content="Découvrez le portfolio de Jérémy Brunel, intégrateur web. Explorez ses projets, ses compétences et contactez-le pour collaborer."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, Jérémy Brunel, intégrateur web, développement de pages web, HTML, CSS, JavaScript, React, Git, Github, CSS, JavaScript, React, Git, Github"
+    />
+    <meta name="author" content="Brunel Jérémy" />
+    <meta name="robots" content="index, follow" />
+    <title>Portfolio de Jérémy Brunel - Intégrateur Web Junior</title>
     <link rel="stylesheet" href="css/loader.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <!-- Métadonnées Open Graph -->
+    <meta
+      property="og:title"
+      content="Portfolio de Jérémy Brunel - Intégrateur Web Junior"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez mes projets, compétences et expériences en tant qu'intégrateur web."
+    />
+    <meta property="og:image" content="[Lien vers une image de présentation]" />
+    <meta property="og:url" content="[URL de votre site]" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <div class="loader-container">
@@ -26,6 +51,11 @@
 
     <header class="header">
       <div class="header-content">
+        <img
+          src="assets/logo-perso/logo-perso.svg"
+          alt="Logo Jérémy Brunel"
+          class="logo-perso"
+        />
         <h1>Jérémy Brunel</h1>
         <nav>
           <ul>
@@ -41,15 +71,18 @@
       <h1>Intégrateur Web Junior</h1>
     </div>
     <section id="about">
-      <h2>À propos de moi</h2>
       <div class="profile">
         <div class="profile-text">
+          <h2 class="about-title">À propos de moi</h2>
           <p>
-            Bonjour, je suis Jérémy, un intégrateur web junior passionné et en
-            reconversion professionnelle.<br />
-            Après avoir suivi une formation chez Openclassrooms, je suis prêt à
-            mettre mes compétences au service d'une entreprise dynamique et
-            innovante.
+            Je suis diplômé de la formation <br />"Intégrateur développeur web"
+            d'Openclassrooms.<br />
+            Armé de nouvelles compétences et d'une motivation sans faille, je
+            suis prêt à contribuer au succès d'une entreprise dynamique et
+            innovante.<br />
+            Mon parcours atypique et ma passion pour les technologies web me
+            permettent d'apporter un regard neuf et une belle énergie à chaque
+            projet.
           </p>
         </div>
         <div class="profile-photo-container">
@@ -65,14 +98,14 @@
         <div class="career-section">
           <h3>Mon parcours</h3>
           <br />
-          <p>
-            Originaire de Bordeaux, j'ai récemment achevé une formation
-            spécialement en intégration et développement web. Cette formation
-            m'a permis d'acquérir des compétences solides en HTML, CSS,
-            JavaScript et en frameworks modernes comme React. Mon parcours
-            professionnel m'a également permis de développer un fort esprit
-            d'équipe et une grande capacité à travailler avec d'autres
-            personnes.
+          <p class="career-text">
+            Auparavant dans le domaine de la logistique, je souhaite m'investir
+            pleinement dans un domaine qui me passionne depuis toujours.<br />
+            J'ai donc décidé de me reconvertir dans le développement web.<br />
+            Cette formation m'a permis d'acquérir des compétences solides en
+            HTML, CSS, JavaScript et en frameworks modernes comme React.<br />
+            Mon parcours professionnel m'a également permis de développer une
+            grande capacité à travailler avec d'autres personnes.
           </p>
           <br />
         </div>
@@ -81,13 +114,13 @@
         <div class="career-section">
           <h3>Ce que je recherche</h3>
           <br />
-          <p>
-            Je cherche une opportunité en tant qu'intégrateur junior au sein
-            d'une entreprise qui valorise l'innovation et la créativité. Je suis
-            prêt à m'investir pleinement et à contribuer à des projets
-            stimulants, tout en continuant à développer mes compétences. Je suis
-            aussi ouvert à des opportunités de formation et de développement
-            professionnel.
+          <p class="career-text">
+            Une opportunité en tant qu'intégrateur junior au sein d'une
+            entreprise qui valorise l'innovation et la créativité.<br />
+            Je suis prêt à m'inpliquer pleinement et à contribuer à des projets
+            stimulants, tout en continuant à développer mes compétences.<br />
+            Je suis aussi ouvert à des opportunités de formation et de
+            développement professionnel.
           </p>
           <br />
         </div>
@@ -96,25 +129,28 @@
       <h3>Pourquoi moi ?</h3>
       <br />
       <ul>
-        <li>
-          Motivation : Je suis passionné par l'intégration web et constamment à
-          la recherche de nouveaux défis pour améliorer mes compétences.
+        <li class="career-text">
+          <strong>Motivation :</strong> Passionné par l'intégration web, je suis
+          constamment à la recherche de nouveaux défis pour améliorer mes
+          compétences.
         </li>
-        <li>
-          Agilité : Je m'adapte rapidement aux nouvelles technologies et aux
-          exigences des projets, assurant une intégration fluide dans n'importe
-          quel environnement de travail..
+        <br />
+        <li class="career-text">
+          <strong>Agilité :</strong> Je m'adapte rapidement aux nouvelles
+          technologies et aux exigences des projets, assurant une intégration
+          fluide dans n'importe quel environnement de travail.
         </li>
-        <li>
-          Esprit d'équipe Solide : Mon expérience professionnelle m'a permis de
-          développer un fort esprit d'équipe et une grande facilité à travailler
-          avec d'autres personnes, favorisant la collaboration et la réussite
-          des projets communs.
+        <br />
+        <li class="career-text">
+          <strong>Esprit d'équipe :</strong> Mon expérience professionnelle m'a
+          permis de développer une aptitude marquée pour le travail en
+          collaboration, favorisant ainsi le succès des projets communs.
         </li>
-        <li>
-          Engagement et Persévérance : Je m'investis pleinement dans chaque
-          projet, avec une détermination à atteindre les objectifs fixés et à
-          dépasser les attentes.
+        <br />
+        <li class="career-text">
+          <strong>Engagement et Persévérance :</strong> Je m'investis pleinement
+          dans chaque projet, avec une détermination à atteindre les objectifs
+          fixés et à dépasser les attentes.
         </li>
       </ul>
     </section>
@@ -150,7 +186,7 @@
           <p>Redux</p>
         </li>
       </ul>
-      <h2>Outils et platformes</h2>
+      <h2>Outils et plateformes</h2>
       <ul>
         <li>
           <img src="assets/logos/vscode.svg" alt="GitHub" class="tech-logo" />
@@ -192,7 +228,8 @@
             <h4>Un projet HTML avec Sass.</h4>
             <p>
               J'ai dévelopé la partie front-end d'un site pour une architecte
-              d'intérieur. Ce projet inclut :<br />
+              d'intérieur.<br />
+              Ce projet inclut :<br />
               - La création d'une page dynamique présentant les travaux de
               l'architecte.<br />
               - La gestion des événements utilisateurs et la manipulation du DOM
@@ -210,7 +247,10 @@
                 <img src="assets/logos/html.svg" alt="HTML" />
                 <img src="assets/logos/sass.svg" alt="Sass" />
               </div>
-              <a href="https://github.com/jeremB-dev/Ohmyfood" target="_blank"
+              <a
+                href="https://github.com/jeremB-dev/Ohmyfood"
+                target="_blank"
+                class="btn"
                 >Voir sur GitHub</a
               >
             </div>
@@ -223,11 +263,12 @@
             class="project-image"
           />
           <div class="project-info">
-            <h3>Projet "Sophie Bluel Portfolio"</h3>
+            <h3>Projet "Sophie Bluel Portefolio"</h3>
             <h4>Un projet JavaScript avec manipulation DOM et API</h4>
             <p>
               J'ai développé la partie front-end d'un site pour une architecte
-              d'intérieur. Ce projet inclut :<br />
+              d'intérieur.<br />
+              Ce projet inclut :<br />
               - La création d'une page dynamique présentant les travaux de
               l'architecte.<br />
               - La gestion des événements utilisateurs et la manipulation du DOM
@@ -249,6 +290,7 @@
               <a
                 href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
                 target="_blank"
+                class="btn"
                 >Voir sur GitHub</a
               >
             </div>
@@ -264,8 +306,8 @@
             <h3>Projet "Nina Carducci"</h3>
             <h4>Un projet d'optimisation SEO <br />et de debug</h4>
             <p>
-              J'ai optimisé le site web d'une photographe professionnelle. Ce
-              projet inclut :<br />
+              J'ai optimisé le site web d'une photographe professionnelle.<br />
+              Ce projet inclut :<br />
               - L'amélioration du référencement avec les balises méta et
               Schema.org.<br />
               - L'optimisation des performances avec la compression et le
@@ -293,6 +335,7 @@
               <a
                 href="https://github.com/jeremB-dev/Nina-Carducci"
                 target="_blank"
+                class="btn"
                 >Voir sur GitHub</a
               >
             </div>
@@ -310,8 +353,8 @@
               Une application React avec Redux <br />et gestion d'API RESTful
             </h4>
             <p>
-              J'ai développé la partie front-end d'une application bancaire. Ce
-              projet inclut :<br />
+              J'ai développé la partie front-end d'une application bancaire.<br />
+              Ce projet inclut :<br />
               - L'implémentation d'un système d'authentification avec JWT.<br />
               - La création d'un tableau de bord utilisateur avec les
               transactions.<br />
@@ -336,6 +379,7 @@
               <a
                 href="https://github.com/jeremB-dev/ArgentBank-Frontend"
                 target="_blank"
+                class="btn"
                 >Voir sur GitHub</a
               >
             </div>
@@ -347,11 +391,32 @@
       <h2>Contactez-moi</h2>
       <form id="contactForm" action="#" method="POST">
         <label for="name">NOM Prénom :</label>
-        <input type="text" id="name" name="name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          pattern="^[a-zA-ZÀ-ÿ]+ [a-zA-ZÀ-ÿ]+$"
+          placeholder="ex: DUBOIS Julien"
+        />
         <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          placeholder="ex: julien.dubois@example.com"
+        />
         <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          minlength="10"
+          placeholder="Votre message (minimum 10 caractères)"
+        ></textarea>
         <button type="submit">Envoyer</button>
       </form>
       <div id="success-modal" class="modal-overlay" style="display: none">

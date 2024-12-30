@@ -1,6 +1,4 @@
-// _navbar.scss
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
 
 nav {
   ul {
@@ -8,16 +6,20 @@ nav {
     gap: 20px;
     list-style: none;
 
-    @include mixins.respond-to("tablet") {
+    @media (max-width: 768px) {
       gap: 15px;
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+      gap: 10px;
     }
   }
 
   a {
     text-decoration: none;
-    color: $black;
+    color: $text-color;
     font-weight: bold;
     position: relative;
     padding-bottom: 3px;
@@ -37,9 +39,14 @@ nav {
 
     &:hover {
       color: $primary-color;
+
       &::before {
         width: 100%;
       }
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
     }
   }
 }

@@ -1,53 +1,45 @@
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
 
+// Animation par défaut pour les grands écrans
 @keyframes lineWidth {
   0%,
   100% {
     width: 5px;
   }
   50% {
-    width: 600px;
-
-    @include mixins.respond-to("tablet") {
-      width: 300px;
-    }
-    @include mixins.respond-to("mobile") {
-      width: 200px;
-    }
-    @include mixins.respond-to("very-small") {
-      width: 150px;
-    }
+    width: 500px;
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+// Animation pour tablettes
+@keyframes lineWidthTablet {
+  0%,
+  100% {
+    width: 5px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+  50% {
+    width: 250px;
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
+// Animation pour mobiles
+@keyframes lineWidthMobile {
+  0%,
+  100% {
+    width: 5px;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    width: 200px;
+  }
+}
+
+// Animation pour très petits écrans
+@keyframes lineWidthSmall {
+  0%,
+  100% {
+    width: 5px;
+  }
+  50% {
+    width: 100px;
   }
 }

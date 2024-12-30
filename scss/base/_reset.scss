@@ -1,5 +1,5 @@
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
+@use "../styles/mixins" as *;
 
 * {
   margin: 0;
@@ -14,8 +14,22 @@ body {
   line-height: 1.6;
   padding-top: 120px;
 
-  @include mixins.respond-to("desktop") {
+  @media (max-width: 1024px) {
     padding-top: 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 70px;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 60px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 360px) {
+    padding-top: 55px;
+    font-size: 13px;
   }
 }
 

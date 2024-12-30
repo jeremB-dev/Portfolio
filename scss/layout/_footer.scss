@@ -1,19 +1,40 @@
-// _footer.scss
 @use "../styles/variables" as *;
-@use "../styles/mixins" as mixins;
 
 .footer {
   padding: 15px 10px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: $white;
+  width: 100%;
 
   p {
     font-size: 0.9rem;
     color: $text-color-light;
     text-align: end;
     margin: 0;
-    padding: 0;
+    padding-right: 30px;
     line-height: 1.6;
     font-weight: bold;
+    font-family: $font-primary;
+    transition: all 0.3s $transition-bezier;
+
+    @media (max-width: 480px) {
+      text-align: center;
+      padding-right: 0;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px 8px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 5px;
+    margin-top: 20px;
   }
 }
