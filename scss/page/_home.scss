@@ -1,0 +1,131 @@
+// _home.scss
+@use "../styles/variables" as *;
+@use "../styles/mixins" as mixins;
+
+.title-page {
+  text-align: center;
+  padding: 60px 20px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+
+  h1 {
+    font-family: $font-secondary;
+    font-size: 3rem;
+    font-weight: 600;
+    background: $gradient-title;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    letter-spacing: 1px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100px;
+      height: 4px;
+      background: $gradient-line;
+      transform: translateX(-50%);
+      border-radius: 2px;
+      animation: lineWidth 3s ease-in-out infinite;
+    }
+  }
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #ddd;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  scroll-margin-top: 115px;
+
+  section h2 {
+    font-size: 2.5rem;
+    margin-top: 85px;
+    color: #4caf50;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 20px;
+
+  &-text {
+    flex: 1;
+    margin-right: 20px;
+
+    p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+  }
+
+  &-photo {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+
+    &-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+#technologies {
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 85px;
+    color: $primary-color;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  li {
+    background-color: $white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba($black, 0.1);
+    transition: all 0.3s $transition-bezier;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 16px rgba($black, 0.1);
+    }
+
+    p {
+      color: $text-color;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  }
+}
+
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}

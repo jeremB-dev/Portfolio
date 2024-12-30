@@ -1,0 +1,27 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as mixins;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  background: $gradient-background;
+  color: $white;
+  line-height: 1.6;
+  padding-top: 120px;
+
+  @include mixins.respond-to("desktop") {
+    padding-top: 60px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-secondary;
+}

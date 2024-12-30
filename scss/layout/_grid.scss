@@ -1,0 +1,35 @@
+// _grid.scss
+@use "../styles/variables" as *;
+@use "../styles/mixins" as mixins;
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+}
+
+.career-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 30px 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.career-divider {
+  width: 4px;
+  height: 455px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    $primary-color,
+    transparent
+  );
+  margin: 0 20px;
+}

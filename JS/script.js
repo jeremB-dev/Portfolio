@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // Ouvrir la carte
       activeCard = card;
       card.classList.add("active");
-      overlay.classList.add("active");
+      overlay.style.display = "block"; // Afficher l'overlay avant d'ajouter la classe active
+      requestAnimationFrame(() => {
+        overlay.classList.add("active");
+      });
       document.body.style.overflow = "hidden";
     });
 
@@ -45,9 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
       activeCard.classList.remove("active");
       overlay.classList.remove("active");
 
+      // Attendre la fin de l'animation avant de cacher l'overlay
       setTimeout(() => {
         overlay.style.display = "none";
-      }, 500); // Ajusté à 500ms pour correspondre à la transition
+      }, 500);
 
       document.body.style.overflow = "auto";
       activeCard = null;
@@ -62,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Gestion du formulaire de contact
+// Gestion du formulaire de contact reste inchangée
 const form = document.querySelector("#contact form");
 const successModal = document.getElementById("success-modal");
 
@@ -70,26 +74,21 @@ if (form) {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // Afficher la modale immédiatement
     successModal.style.display = "flex";
 
     const formData = new FormData(form);
     formData.append("_captcha", "false");
 
     try {
-      // Envoi en arrière-plan
       await fetch("https://formsubmit.co/jeremybrunel.dev@gmail.com", {
         method: "POST",
         body: formData,
       });
-
-      // Réinitialiser le formulaire après l'envoi réussi
       form.reset();
     } catch (error) {
       console.error("Erreur lors de l'envoi:", error);
     }
 
-    // Masquer la modale après 3 secondes
     setTimeout(() => {
       successModal.style.display = "none";
     }, 3000);

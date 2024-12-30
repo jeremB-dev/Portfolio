@@ -1,0 +1,53 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as mixins;
+
+@keyframes lineWidth {
+  0%,
+  100% {
+    width: 5px;
+  }
+  50% {
+    width: 600px;
+
+    @include mixins.respond-to("tablet") {
+      width: 300px;
+    }
+    @include mixins.respond-to("mobile") {
+      width: 200px;
+    }
+    @include mixins.respond-to("very-small") {
+      width: 150px;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

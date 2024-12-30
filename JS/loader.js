@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Supprimer le loader après l'animation de fondu
     setTimeout(() => {
       loader.remove();
-    }, 500);
-  }, 5000); // 5000ms = 5s
+    }, 200);
+  }, 2000);
 });

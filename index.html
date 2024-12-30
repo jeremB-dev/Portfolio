@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Jérémy Brunel</title>
     <link rel="stylesheet" href="css/loader.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="loader-container">
-      <div class="welcome-message">
-        <h1>Salut ! 👋</h1>
-        <p>Je vous prépare un portfolio sympa !</p>
+      <div class="loader-content">
+        <div class="welcome-message">
+          <h1>Salut ! 👋</h1>
+          <p>Voici mon portfolio ...</p>
+        </div>
+        <div class="loader"></div>
       </div>
-      <div class="loader"></div>
     </div>
 
-    <header>
+    <header class="header">
       <div class="header-content">
         <h1>Jérémy Brunel</h1>
         <nav>
@@ -30,46 +37,61 @@
         </nav>
       </div>
     </header>
+    <div class="title-page">
+      <h1>Intégrateur Web Junior</h1>
+    </div>
     <section id="about">
-      <div class="profile-photo-container">
-        <img
-          src="assets/Photo/unnamed.jpg"
-          alt="Jérémy Brunel"
-          class="profile-photo"
-        />
-      </div>
       <h2>À propos de moi</h2>
-      <p>
-        Salut, je suis Jérémy, un intégrateur web junior passionné et en
-        reconversion professionnelle.<br />
-        Après avoir suivi une formation chez Openclassrooms, je suis prêt à
-        mettre mes compétences au service d'une entreprise dynamique et
-        innovante.
-      </p>
+      <div class="profile">
+        <div class="profile-text">
+          <p>
+            Bonjour, je suis Jérémy, un intégrateur web junior passionné et en
+            reconversion professionnelle.<br />
+            Après avoir suivi une formation chez Openclassrooms, je suis prêt à
+            mettre mes compétences au service d'une entreprise dynamique et
+            innovante.
+          </p>
+        </div>
+        <div class="profile-photo-container">
+          <img
+            src="assets/Photo/photoMoi.webp"
+            alt="Jérémy Brunel"
+            class="profile-photo"
+          />
+        </div>
+      </div>
       <br />
-      <br />
-      <h3>Mon parcours</h3>
-      <br />
-      <p>
-        Originaire de Bordeaux, j'ai récemment achevé une formation spécialisée
-        en intégration et développement web. Cette formation m'a permis
-        d'acquérir des compétences solides en HTML, CSS, JavaScript et en
-        frameworks modernes comme React. Mon parcours professionnel m'a
-        également permis de développer un fort esprit d'équipe et une grande
-        capacité à travailler avec d'autres personnes.
-      </p>
-      <br />
-      <br />
-      <h3>Ce que je recherche</h3>
-      <br />
-      <p>
-        Je cherche une opportunité en tant qu'intégrateur junior au sein d'une
-        entreprise qui valorise l'innovation et la créativité. Je suis prêt à
-        m'investir pleinement et à contribuer à des projets stimulants, tout en
-        continuant à développer mes compétences. Je suis aussi ouvert à des
-        opportunités de formation et de développement professionnel.
-      </p>
-      <br />
+      <div class="career-container">
+        <div class="career-section">
+          <h3>Mon parcours</h3>
+          <br />
+          <p>
+            Originaire de Bordeaux, j'ai récemment achevé une formation
+            spécialement en intégration et développement web. Cette formation
+            m'a permis d'acquérir des compétences solides en HTML, CSS,
+            JavaScript et en frameworks modernes comme React. Mon parcours
+            professionnel m'a également permis de développer un fort esprit
+            d'équipe et une grande capacité à travailler avec d'autres
+            personnes.
+          </p>
+          <br />
+        </div>
+        <br />
+        <div class="career-divider"></div>
+        <div class="career-section">
+          <h3>Ce que je recherche</h3>
+          <br />
+          <p>
+            Je cherche une opportunité en tant qu'intégrateur junior au sein
+            d'une entreprise qui valorise l'innovation et la créativité. Je suis
+            prêt à m'investir pleinement et à contribuer à des projets
+            stimulants, tout en continuant à développer mes compétences. Je suis
+            aussi ouvert à des opportunités de formation et de développement
+            professionnel.
+          </p>
+          <br />
+        </div>
+      </div>
       <br />
       <h3>Pourquoi moi ?</h3>
       <br />
@@ -128,8 +150,6 @@
           <p>Redux</p>
         </li>
       </ul>
-      <br />
-      <br />
       <h2>Outils et platformes</h2>
       <ul>
         <li>
@@ -163,7 +183,7 @@
       <div class="projects-grid">
         <div class="project-card">
           <img
-            src="assets/Captures/ohmyfood/home.png"
+            src="assets/Captures/ohmyfood/home.webp"
             alt="Projet 1"
             class="project-image"
           />
@@ -185,13 +205,15 @@
               permis de consolider mes compétences en JavaScript pour les
               applications web modernes.
             </p>
-            <div class="tech-icons">
-              <img src="assets/logos/html.svg" alt="HTML" />
-              <img src="assets/logos/sass.svg" alt="Sass" />
+            <div class="tech-icons-btn-container">
+              <div class="tech-icons">
+                <img src="assets/logos/html.svg" alt="HTML" />
+                <img src="assets/logos/sass.svg" alt="Sass" />
+              </div>
+              <a href="https://github.com/jeremB-dev/Ohmyfood" target="_blank"
+                >Voir sur GitHub</a
+              >
             </div>
-            <a href="https://github.com/jeremB-dev/Ohmyfood" target="_blank"
-              >Voir sur GitHub</a
-            >
           </div>
         </div>
         <div class="project-card">
@@ -218,27 +240,29 @@
               Ce projet m'a permis de consolider mes compétences en JavaScript
               pour les applications web modernes.
             </p>
-            <div class="tech-icons">
-              <img src="assets/logos/html.svg" alt="HTML" />
-              <img src="assets/logos/css.svg" alt="CSS" />
-              <img src="assets/logos/javascript.svg" alt="JavaScript" />
+            <div class="tech-icons-btn-container">
+              <div class="tech-icons">
+                <img src="assets/logos/html.svg" alt="HTML" />
+                <img src="assets/logos/css.svg" alt="CSS" />
+                <img src="assets/logos/javascript.svg" alt="JavaScript" />
+              </div>
+              <a
+                href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
+                target="_blank"
+                >Voir sur GitHub</a
+              >
             </div>
-            <a
-              href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
-              target="_blank"
-              >Voir sur GitHub</a
-            >
           </div>
         </div>
         <div class="project-card">
           <img
-            src="assets/Captures/ninaCarducci/ninaCarducci.png"
+            src="assets/Captures/ninaCarducci/ninaCarducci.webp"
             alt="Projet 2"
             class="project-image"
           />
           <div class="project-info">
             <h3>Projet "Nina Carducci"</h3>
-            <h4>Un projet d'optimisation SEO et de debug</h4>
+            <h4>Un projet d'optimisation SEO <br />et de debug</h4>
             <p>
               J'ai optimisé le site web d'une photographe professionnelle. Ce
               projet inclut :<br />
@@ -256,31 +280,35 @@
               compétences en débogage et en optimisation web.
               <br />
             </p>
-            <div class="tech-icons">
-              <img src="assets/logos/html.svg" alt="HTML" />
-              <img src="assets/logos/css.svg" alt="CSS" />
-              <img src="assets/logos/javascript.svg" alt="JavaScript" />
-              <img
-                src="assets/logos/google-lighthouse.svg"
-                alt="Google Lighthouse"
-              />
+            <div class="tech-icons-btn-container">
+              <div class="tech-icons">
+                <img src="assets/logos/html.svg" alt="HTML" />
+                <img src="assets/logos/css.svg" alt="CSS" />
+                <img src="assets/logos/javascript.svg" alt="JavaScript" />
+                <img
+                  src="assets/logos/google-lighthouse.svg"
+                  alt="Google Lighthouse"
+                />
+              </div>
+              <a
+                href="https://github.com/jeremB-dev/Nina-Carducci"
+                target="_blank"
+                >Voir sur GitHub</a
+              >
             </div>
-            <a
-              href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
-              target="_blank"
-              >Voir sur GitHub</a
-            >
           </div>
         </div>
         <div class="project-card">
           <img
-            src="assets/Captures/argenBank/argentBank.png"
+            src="assets/Captures/argenBank/argentBank.webp"
             alt="Projet 2"
             class="project-image"
           />
           <div class="project-info">
             <h3>Projet "Argent Bank"</h3>
-            <h4>Une application React avec Redux et gestion d'API RESTful</h4>
+            <h4>
+              Une application React avec Redux <br />et gestion d'API RESTful
+            </h4>
             <p>
               J'ai développé la partie front-end d'une application bancaire. Ce
               projet inclut :<br />
@@ -297,18 +325,20 @@
               React et Redux pour les applications web modernes.
               <br />
             </p>
-            <div class="tech-icons">
-              <img src="assets/logos/html.svg" alt="HTML" />
-              <img src="assets/logos/css.svg" alt="CSS" />
-              <img src="assets/logos/javascript.svg" alt="JavaScript" />
-              <img src="assets/logos/react.svg" alt="React" />
-              <img src="assets/logos/redux.svg" alt="Redux" />
+            <div class="tech-icons-btn-container">
+              <div class="tech-icons">
+                <img src="assets/logos/html.svg" alt="HTML" />
+                <img src="assets/logos/css.svg" alt="CSS" />
+                <img src="assets/logos/javascript.svg" alt="JavaScript" />
+                <img src="assets/logos/react.svg" alt="React" />
+                <img src="assets/logos/redux.svg" alt="Redux" />
+              </div>
+              <a
+                href="https://github.com/jeremB-dev/ArgentBank-Frontend"
+                target="_blank"
+                >Voir sur GitHub</a
+              >
             </div>
-            <a
-              href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
-              target="_blank"
-              >Voir sur GitHub</a
-            >
           </div>
         </div>
       </div>
@@ -316,7 +346,7 @@
     <section id="contact">
       <h2>Contactez-moi</h2>
       <form id="contactForm" action="#" method="POST">
-        <label for="name">Nom :</label>
+        <label for="name">NOM Prénom :</label>
         <input type="text" id="name" name="name" required />
         <label for="email">Email :</label>
         <input type="email" id="email" name="email" required />

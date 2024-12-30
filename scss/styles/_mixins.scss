@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "../styles/variables" as *;
+@use "../styles/breakpoints" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-hover {
+  transition: all 0.3s $transition-bezier;
+
+  &:hover {
+    transform: scale(1.02) translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $size: map.get($breakpoints, $breakpoint); // Récupère la valeur du breakpoint
+  @if $size {
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @error "Le breakpoint #{$breakpoint} n'existe pas. Vérifiez votre map dans _variables.scss.";
+  }
+}
