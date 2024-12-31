@@ -885,8 +885,8 @@ form textarea:focus::placeholder {
 }
 form button {
   background-color: #4caf50;
-  color: #fff;
-  font-size: 20px;
+  color: #333;
+  font-size: 18px;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
