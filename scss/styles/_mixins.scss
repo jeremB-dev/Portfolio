@@ -27,7 +27,7 @@
 
 // Mixin pour les transitions fluides
 @mixin smooth-transition {
-  transition: all 0.3s $transition-bezier;
+  transition: all 0.6s $transition-bezier;
 }
 
 // Mixin pour effet glass
@@ -52,9 +52,5 @@
   &::-webkit-scrollbar-thumb {
     background: $primary-color;
     border-radius: 4px;
-
-    &:hover {
-      background: darken($primary-color, 10%);
-    }
   }
 }

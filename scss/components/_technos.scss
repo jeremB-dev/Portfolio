@@ -88,6 +88,11 @@
   height: 50px;
   margin-bottom: 10px;
 
+  @media (max-width: 1075px) {
+    width: 40px;
+    height: 40px;
+  }
+
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;

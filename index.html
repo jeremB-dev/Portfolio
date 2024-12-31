@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- configuration de la page -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Language" content="fr" />
-    <meta name="copyright" content="@ Jérémy Brunel" />
-    <link rel="icon" href="assets/logo-perso/logo.ico" type="image/x-icon" />
+    <!-- Configuration de base -->
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="copyright" content="© 2024 Jérémy Brunel" >
 
+    <!-- SEO - Métadonnées principales -->
     <meta
       name="description"
-      content="Découvrez le portfolio de Jérémy Brunel, intégrateur web. Explorez ses projets, ses compétences et contactez-le pour collaborer."
-    />
+      content="Portfolio de Jérémy Brunel, intégrateur web junior passionné. Expertise en HTML, CSS, JavaScript et React. 
+      Découvrez mes projets d'intégration web, d'optimisation SEO et de développement frontend.">
     <meta
       name="keywords"
-      content="portfolio, Jérémy Brunel, intégrateur web, développement de pages web, HTML, CSS, JavaScript, React, Git, Github, CSS, JavaScript, React, Git, Github"
-    />
-    <meta name="author" content="Brunel Jérémy" />
-    <meta name="robots" content="index, follow" />
-    <title>Portfolio de Jérémy Brunel - Intégrateur Web Junior</title>
-    <link rel="stylesheet" href="css/loader.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Métadonnées Open Graph -->
-    <meta
-      property="og:title"
-      content="Portfolio de Jérémy Brunel - Intégrateur Web Junior"
-    />
+      content="intégrateur web, développeur frontend, Jérémy Brunel, portfolio web, HTML, CSS, JavaScript, React, Redux, SASS, 
+      développement web, projets web">
+    <meta name="author" content="Jérémy Brunel" >
+
+    <!-- Open Graph - Pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Jérémy Brunel | Intégrateur Web Junior">
     <meta
       property="og:description"
-      content="Découvrez mes projets, compétences et expériences en tant qu'intégrateur web."
-    />
-    <meta property="og:image" content="[Lien vers une image de présentation]" />
-    <meta property="og:url" content="[URL de votre site]" />
-    <meta property="og:type" content="website" />
+      content="Découvrez mon portfolio d'intégrateur web. Projets React, optimisation SEO, intégration responsive et développement frontend moderne.">
+    <meta property="og:type" content="website" >
+    <meta property="og:url" content="[Votre-URL]" >
+    <meta property="og:image" content="assets/Photo/photoMoi.webp" >
+    <meta property="og:locale" content="fr_FR" >
+    <meta property="og:site_name" content="Portfolio Jérémy Brunel" >
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta
+      name="twitter:title"
+      content="Jérémy Brunel | Intégrateur Web Junior">
+    <meta
+      name="twitter:description"
+      content="Portfolio d'un intégrateur web passionné. Découvrez mes projets et compétences en développement frontend.">
+    <meta name="twitter:image" content="assets/Photo/photoMoi.webp" >
+
+    <!-- Métadonnées supplémentaires -->
+    <meta name="robots" content="index, follow" >
+    <link rel="canonical" href="[Votre-URL]" >
+
+    <title>Portfolio de Jérémy Brunel - Intégrateur Web Junior</title>
+    <link rel="icon" href="assets/logo-perso/logo.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="css/loader.css" >
+    <link rel="stylesheet" href="css/style.css" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
   </head>
   <body>
+    <!-- Loader -->
     <div class="loader-container">
       <div class="loader-content">
         <div class="welcome-message">
@@ -51,17 +64,17 @@
 
     <header class="header">
       <div class="header-content">
-        <img
-          src="assets/logo-perso/logo-perso.svg"
-          alt="Logo Jérémy Brunel"
-          class="logo-perso"
-        />
-        <h1>Jérémy Brunel</h1>
-        <nav>
+        <div class="brand-container">
+          <div class="logo-perso">
+            <img src="/assets/logo-perso/logo-perso.svg" alt="Logo JB">
+          </div>
+          <h1>Jérémy Brunel</h1>
+        </div>
+        <nav class="header-nav">
           <ul>
             <li><a href="#about">À propos</a></li>
             <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#projects">Projets</a></li>
+            <li><a href="#projets">Projets</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -75,11 +88,11 @@
         <div class="profile-text">
           <h2 class="about-title">À propos de moi</h2>
           <p>
-            Je suis diplômé de la formation <br />"Intégrateur développeur web"
-            d'Openclassrooms.<br />
+            Je suis diplômé de la formation <br >"Intégrateur développeur web"
+            d'Openclassrooms.<br >
             Armé de nouvelles compétences et d'une motivation sans faille, je
             suis prêt à contribuer au succès d'une entreprise dynamique et
-            innovante.<br />
+            innovante.<br >
             Mon parcours atypique et ma passion pour les technologies web me
             permettent d'apporter un regard neuf et une belle énergie à chaque
             projet.
@@ -90,63 +103,60 @@
             src="assets/Photo/photoMoi.webp"
             alt="Jérémy Brunel"
             class="profile-photo"
-          />
+          >
         </div>
       </div>
-      <br />
+      <br >
       <div class="career-container">
         <div class="career-section">
           <h3>Mon parcours</h3>
-          <br />
+          <br >
           <p class="career-text">
             Auparavant dans le domaine de la logistique, je souhaite m'investir
-            pleinement dans un domaine qui me passionne depuis toujours.<br />
-            J'ai donc décidé de me reconvertir dans le développement web.<br />
+            pleinement dans un domaine qui me passionne depuis toujours.<br >
+            J'ai donc décidé de me reconvertir dans le développement web.<br >
             Cette formation m'a permis d'acquérir des compétences solides en
-            HTML, CSS, JavaScript et en frameworks modernes comme React.<br />
+            HTML, CSS, JavaScript et en frameworks modernes comme React.<br >
             Mon parcours professionnel m'a également permis de développer une
             grande capacité à travailler avec d'autres personnes.
           </p>
-          <br />
+          <br >
         </div>
-        <br />
+        <br >
         <div class="career-divider"></div>
         <div class="career-section">
           <h3>Ce que je recherche</h3>
-          <br />
+          <br >
           <p class="career-text">
             Une opportunité en tant qu'intégrateur junior au sein d'une
-            entreprise qui valorise l'innovation et la créativité.<br />
+            entreprise qui valorise l'innovation et la créativité.<br >
             Je suis prêt à m'inpliquer pleinement et à contribuer à des projets
-            stimulants, tout en continuant à développer mes compétences.<br />
+            stimulants, tout en continuant à développer mes compétences.<br >
             Je suis aussi ouvert à des opportunités de formation et de
             développement professionnel.
           </p>
-          <br />
+          <br >
         </div>
       </div>
-      <br />
+      <br >
       <h3>Pourquoi moi ?</h3>
-      <br />
+      <br >
       <ul>
         <li class="career-text">
           <strong>Motivation :</strong> Passionné par l'intégration web, je suis
           constamment à la recherche de nouveaux défis pour améliorer mes
           compétences.
         </li>
-        <br />
         <li class="career-text">
           <strong>Agilité :</strong> Je m'adapte rapidement aux nouvelles
           technologies et aux exigences des projets, assurant une intégration
           fluide dans n'importe quel environnement de travail.
         </li>
-        <br />
         <li class="career-text">
           <strong>Esprit d'équipe :</strong> Mon expérience professionnelle m'a
           permis de développer une aptitude marquée pour le travail en
           collaboration, favorisant ainsi le succès des projets communs.
         </li>
-        <br />
         <li class="career-text">
           <strong>Engagement et Persévérance :</strong> Je m'investis pleinement
           dans chaque projet, avec une détermination à atteindre les objectifs
@@ -158,58 +168,105 @@
       <h2>Technologies apprises</h2>
       <ul>
         <li>
-          <img src="assets/logos/html.svg" alt="HTML" class="tech-logo" />
+          <img
+            src="assets/logos/html.svg"
+            alt="logo techno HTML"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>HTML</p>
         </li>
         <li>
-          <img src="assets/logos/css.svg" alt="CSS" class="tech-logo" />
+          <img
+            src="assets/logos/css.svg"
+            alt="logo techno CSS"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>CSS</p>
         </li>
         <li>
-          <img src="assets/logos/sass.svg" alt="Sass" class="tech-logo" />
+          <img
+            src="assets/logos/sass.svg"
+            alt="logo techno SASS"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>Sass</p>
         </li>
         <li>
           <img
             src="assets/logos/javascript.svg"
-            alt="JavaScript"
+            alt="logo techno JavaScript"
             class="tech-logo"
-          />
+            loading="lazy"
+          >
           <p>JavaScript</p>
         </li>
         <li>
-          <img src="assets/logos/react.svg" alt="React" class="tech-logo" />
+          <img
+            src="assets/logos/react.svg"
+            alt="logo techno React"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>React</p>
         </li>
         <li>
-          <img src="assets/logos/redux.svg" alt="Redux" class="tech-logo" />
+          <img
+            src="assets/logos/redux.svg"
+            alt="logo techno Redux"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>Redux</p>
         </li>
       </ul>
       <h2>Outils et plateformes</h2>
       <ul>
         <li>
-          <img src="assets/logos/vscode.svg" alt="GitHub" class="tech-logo" />
+          <img
+            src="assets/logos/vscode.svg"
+            alt="logo platefomre GitHub"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>Visual Studio Code</p>
         </li>
         <li>
-          <img src="assets/logos/Git.svg" alt="Git" class="tech-logo" />
+          <img
+            src="assets/logos/Git.svg"
+            alt="logo plateforme Git"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>Git</p>
         </li>
         <li>
-          <img src="assets/logos/github.svg" alt="GitHub" class="tech-logo" />
+          <img
+            src="assets/logos/github.svg"
+            alt="logo plateforme GitHub"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>GitHub</p>
         </li>
         <li>
           <img
             src="assets/logos/google-lighthouse.svg"
-            alt="Google Lighthouse"
+            alt="logo plateforme Google Lighthouse"
             class="tech-logo"
-          />
+            loading="lazy"
+          >
           <p>Google Lighthouse</p>
         </li>
         <li>
-          <img src="assets/logos/wave.svg" alt="Wave" class="tech-logo" />
+          <img
+            src="assets/logos/wave.svg"
+            alt="logo plateforme Wave"
+            class="tech-logo"
+            loading="lazy"
+          >
           <p>Wave</p>
         </li>
       </ul>
@@ -222,21 +279,22 @@
             src="assets/Captures/ohmyfood/home.webp"
             alt="Projet 1"
             class="project-image"
-          />
+            loading="lazy"
+          >
           <div class="project-info">
             <h3>Projet "Oh my food""</h3>
             <h4>Un projet HTML avec Sass.</h4>
             <p>
               J'ai dévelopé la partie front-end d'un site pour une architecte
-              d'intérieur.<br />
-              Ce projet inclut :<br />
+              d'intérieur.<br >
+              Ce projet inclut :<br >
               - La création d'une page dynamique présentant les travaux de
-              l'architecte.<br />
+              l'architecte.<br >
               - La gestion des événements utilisateurs et la manipulation du DOM
-              en JavaScript.<br />
+              en JavaScript.<br >
               - Le développement d'une page de connexion et d'une modale pour
-              uploader des médias.<br />
-              <br />
+              uploader des médias.<br >
+              <br >
               J'ai appris à communiquer avec une API, à gérer des formulaires et
               à tester les fonctionnalités avec un code back-end. Ce projet m'a
               permis de consolider mes compétences en JavaScript pour les
@@ -244,8 +302,8 @@
             </p>
             <div class="tech-icons-btn-container">
               <div class="tech-icons">
-                <img src="assets/logos/html.svg" alt="HTML" />
-                <img src="assets/logos/sass.svg" alt="Sass" />
+                <img src="assets/logos/html.svg" alt="HTML" loading="lazy" >
+                <img src="assets/logos/sass.svg" alt="Sass" loading="lazy" >
               </div>
               <a
                 href="https://github.com/jeremB-dev/Ohmyfood"
@@ -261,31 +319,32 @@
             src="assets/Captures/sophieBluel/sophieBluel.webp"
             alt="Projet 2"
             class="project-image"
-          />
+            loading="lazy"
+          >
           <div class="project-info">
             <h3>Projet "Sophie Bluel Portefolio"</h3>
             <h4>Un projet JavaScript avec manipulation DOM et API</h4>
             <p>
               J'ai développé la partie front-end d'un site pour une architecte
-              d'intérieur.<br />
-              Ce projet inclut :<br />
+              d'intérieur.<br >
+              Ce projet inclut :<br >
               - La création d'une page dynamique présentant les travaux de
-              l'architecte.<br />
+              l'architecte.<br >
               - La gestion des événements utilisateurs et la manipulation du DOM
-              en JavaScript.<br />
+              en JavaScript.<br >
               - Le développement d'une page de connexion et d'une modale pour
-              uploader des médias.<br />
-              <br />
+              uploader des médias.<br >
+              <br >
               J'ai appris à communiquer avec une API, à gérer des formulaires et
-              à tester les fonctionnalités avec un code back-end.<br />
+              à tester les fonctionnalités avec un code back-end.<br >
               Ce projet m'a permis de consolider mes compétences en JavaScript
               pour les applications web modernes.
             </p>
             <div class="tech-icons-btn-container">
               <div class="tech-icons">
-                <img src="assets/logos/html.svg" alt="HTML" />
-                <img src="assets/logos/css.svg" alt="CSS" />
-                <img src="assets/logos/javascript.svg" alt="JavaScript" />
+                <img src="assets/logos/html.svg" alt="HTML" loading="lazy" >
+                <img src="assets/logos/css.svg" alt="CSS" loading="lazy" >
+                <img src="assets/logos/javascript.svg" alt="JavaScript" loading="lazy" >
               </div>
               <a
                 href="https://github.com/jeremB-dev/Portfolio-architecte-sophie-bluel-master"
@@ -301,36 +360,38 @@
             src="assets/Captures/ninaCarducci/ninaCarducci.webp"
             alt="Projet 2"
             class="project-image"
-          />
+            loading="lazy"
+          >
           <div class="project-info">
             <h3>Projet "Nina Carducci"</h3>
-            <h4>Un projet d'optimisation SEO <br />et de debug</h4>
+            <h4>Un projet d'optimisation SEO <br >et de debug</h4>
             <p>
-              J'ai optimisé le site web d'une photographe professionnelle.<br />
-              Ce projet inclut :<br />
+              J'ai optimisé le site web d'une photographe professionnelle.<br >
+              Ce projet inclut :<br >
               - L'amélioration du référencement avec les balises méta et
-              Schema.org.<br />
+              Schema.org.<br >
               - L'optimisation des performances avec la compression et le
-              redimensionnement des images.<br />
+              redimensionnement des images.<br >
               - Le débogage et la correction des erreurs dans le code JavaScript
-              existant.<br />
-              - L'amélioration de l'accessibilité selon les normes WCAG.<br />
-              <br />
+              existant.<br >
+              - L'amélioration de l'accessibilité selon les normes WCAG.<br >
+              <br >
               J'ai appris à utiliser les outils d'audit comme Lighthouse et
               Wave, à optimiser les performances d'un site web, et à implémenter
               les bonnes pratiques SEO. Ce projet m'a permis de consolider mes
               compétences en débogage et en optimisation web.
-              <br />
+              <br >
             </p>
             <div class="tech-icons-btn-container">
               <div class="tech-icons">
-                <img src="assets/logos/html.svg" alt="HTML" />
-                <img src="assets/logos/css.svg" alt="CSS" />
-                <img src="assets/logos/javascript.svg" alt="JavaScript" />
+                <img src="assets/logos/html.svg" alt="HTML" loading="lazy" >
+                <img src="assets/logos/css.svg" alt="CSS" loading="lazy" >
+                <img src="assets/logos/javascript.svg" alt="JavaScript" loading="lazy" >
                 <img
                   src="assets/logos/google-lighthouse.svg"
                   alt="Google Lighthouse"
-                />
+                  loading="lazy"
+                >
               </div>
               <a
                 href="https://github.com/jeremB-dev/Nina-Carducci"
@@ -346,35 +407,36 @@
             src="assets/Captures/argenBank/argentBank.webp"
             alt="Projet 2"
             class="project-image"
-          />
+            loading="lazy"
+          >
           <div class="project-info">
             <h3>Projet "Argent Bank"</h3>
             <h4>
-              Une application React avec Redux <br />et gestion d'API RESTful
+              Une application React avec Redux <br >et gestion d'API RESTful
             </h4>
             <p>
-              J'ai développé la partie front-end d'une application bancaire.<br />
-              Ce projet inclut :<br />
-              - L'implémentation d'un système d'authentification avec JWT.<br />
+              J'ai développé la partie front-end d'une application bancaire.<br >
+              Ce projet inclut :<br >
+              - L'implémentation d'un système d'authentification avec JWT.<br >
               - La création d'un tableau de bord utilisateur avec les
-              transactions.<br />
-              - La gestion du state global de l'application avec Redux.<br />
+              transactions.<br >
+              - La gestion du state global de l'application avec Redux.<br >
               - Le développement de fonctionnalités de mise à jour du profil
-              utilisateur.<br />
-              <br />
+              utilisateur.<br >
+              <br >
               J'ai appris à gérer l'état global d'une application avec Redux, à
               sécuriser des routes avec JWT, et à documenter une API avec
               Swagger. Ce projet m'a permis de consolider mes compétences en
               React et Redux pour les applications web modernes.
-              <br />
+              <br >
             </p>
             <div class="tech-icons-btn-container">
               <div class="tech-icons">
-                <img src="assets/logos/html.svg" alt="HTML" />
-                <img src="assets/logos/css.svg" alt="CSS" />
-                <img src="assets/logos/javascript.svg" alt="JavaScript" />
-                <img src="assets/logos/react.svg" alt="React" />
-                <img src="assets/logos/redux.svg" alt="Redux" />
+                <img src="assets/logos/html.svg" alt="HTML" loading="lazy" >
+                <img src="assets/logos/css.svg" alt="CSS" loading="lazy" >
+                <img src="assets/logos/javascript.svg" alt="JavaScript" loading="lazy" >
+                <img src="assets/logos/react.svg" alt="React" loading="lazy" >
+                <img src="assets/logos/redux.svg" alt="Redux" loading="lazy" >
               </div>
               <a
                 href="https://github.com/jeremB-dev/ArgentBank-Frontend"
@@ -398,7 +460,7 @@
           required
           pattern="^[a-zA-ZÀ-ÿ]+ [a-zA-ZÀ-ÿ]+$"
           placeholder="ex: DUBOIS Julien"
-        />
+        >
         <label for="email">Email :</label>
         <input
           type="email"
@@ -407,7 +469,7 @@
           required
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           placeholder="ex: julien.dubois@example.com"
-        />
+        >
         <label for="message">Message :</label>
         <textarea
           id="message"
