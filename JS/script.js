@@ -5,18 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(overlay);
 
   const projectCards = document.querySelectorAll(".project-card");
-  const header = document.querySelector(".header"); // Sélectionner le header
+  const header = document.querySelector(".header"); // Sélectionne le header
   let activeCard = null;
 
   projectCards.forEach((card) => {
-    // Ajouter le bouton de fermeture à chaque carte
+    // Ajoute le bouton de fermeture à chaque carte
     const closeButton = document.createElement("button");
     closeButton.className = "close-button";
     closeButton.innerHTML = "×";
     card.appendChild(closeButton);
 
     card.addEventListener("click", function (e) {
-      // Ne rien faire si on clique sur un lien ou le bouton fermer
       if (
         e.target.tagName === "A" ||
         e.target.classList.contains("close-button")
@@ -28,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       activeCard = card;
       card.classList.add("active");
       header.classList.add("darkened"); // Assombrir le header
-      overlay.style.display = "block"; // Afficher l'overlay avant d'ajouter la classe active
+      overlay.style.display = "block"; // Affiche l'overlay avant d'ajouter la classe active
       requestAnimationFrame(() => {
         overlay.classList.add("active");
       });
@@ -41,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Fermer la carte quand on clique sur l'overlay
+  // Ferme la carte quand on clique sur l'overlay
   overlay.addEventListener("click", closeCard);
 
   // Fonction pour fermer la carte active
   function closeCard() {
     if (activeCard) {
       activeCard.classList.remove("active");
-      header.classList.remove("darkened"); // Réinitialiser le header
+      header.classList.remove("darkened"); // Réinitialise le header
       overlay.classList.remove("active");
 
       // Attendre la fin de l'animation avant de cacher l'overlay
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Fermer avec la touche Échap
+  // Ferme avec la touche Échap
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       closeCard();
@@ -69,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Gestion du formulaire de contact reste inchangée
+// Gestion du formulaire de contact
 const form = document.querySelector("#contact form");
 const successModal = document.getElementById("success-modal");
 
@@ -94,6 +93,6 @@ if (form) {
 
     setTimeout(() => {
       successModal.style.display = "none";
-    }, 3000);
+    }, 2000);
   });
 }
